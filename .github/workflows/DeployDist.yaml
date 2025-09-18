@@ -18,7 +18,7 @@ jobs:
               run: node -v
             - name: Install Dependencies
               run: npm ci #ci = Clearn Install
-            - name: Run Test
+            - name: Run Tests
               run: npm run test
                 
 
