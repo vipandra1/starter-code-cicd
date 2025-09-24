@@ -1,5 +1,14 @@
 name: Deploy Dist
-on: [push,workflow_dispatch]
+# on: [push,workflow_dispatch]
+on: 
+  push: 
+       branches: 
+            - main
+            - release/prod_github_actions
+       paths-ignore: 
+            - '.github/workflows/'     
+            - README.md
+       workflow_dispatch:      
 jobs:
     test: 
         runs-on: ubuntu-latest
