@@ -1,14 +1,14 @@
 name: Deploy Dist
 # on: [push,workflow_dispatch]
-on: 
-  push: 
-       branches: 
+on:
+  push:
+       branches:
             - main
-            - release/prod_github_actions
+            - 'release/**'
        paths-ignore: 
-            - '.github/workflows/'     
+            - '.github/workflows/' 
             - README.md
-       workflow_dispatch:      
+       workflow_dispatch:
 jobs:
     test: 
         runs-on: ubuntu-latest
@@ -56,4 +56,4 @@ jobs:
             - name: Build Project
               run: npm run build    
             - name: Deploy
-              run: echo "Deploy Successfully"
+              run: echo "Deploy  Successfully"
